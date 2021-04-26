@@ -2,3 +2,4 @@ spring:
   batch:
     job:
       names: ${job.name:NONE}   #배치앱을 실행하면 모든 JOB이 실행되는 상황을 막기 위해서 설정해줌. job name 파라미터로 job을 실행 시킬 수 있음. 또한 모든 배치가 실행되는 것을 막을 수 있음.
+    initialize-schema: always   #메모리 DB(embedded)는 자동으로 초기화 sql문 실행. always는 항상 초기화 sql문 실행. 개발에서는 embedded나 always도 자주 사용함. 운영은 never로 설정

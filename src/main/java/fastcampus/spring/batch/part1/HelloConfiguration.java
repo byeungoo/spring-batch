@@ -24,7 +24,7 @@ public class HelloConfiguration {
     @Bean
     public Job helloJob(){
         return jobBuilderFactory.get("helloJob")        //job의 이름
-                .incrementer(new RunIdIncrementer())    //job이 실행할 때 마다 파라미터 아이디를 자동으로 생성해주는 클래스.
+                .incrementer(new RunIdIncrementer())    //job이 실행할 때 마다 파라미터 아이디를 자동으로 생성해주는 클래스. sequence한 파라미터를 자동으로 생성해줌.
                 .start(this.helloStep())           //job실행 시 최초로 실행되는 step을 설정하는 메소드.
                 .build();
     }

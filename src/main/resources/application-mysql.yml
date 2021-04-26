@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://54.180.167.253:5006/test?serverTimezone=Asia/Seoul
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: pass
+  batch:
+    initialize-schema: never
